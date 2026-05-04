@@ -135,7 +135,7 @@ Complete the Udemy ML course, build a strong foundation in supervised learning, 
 
 **Your Name**
 - GitHub: [@ChetanM-collab](https://github.com/ChetanM-collab)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/chetanmmohite/)
+- LinkedIn: [ChetanMMohite](https://www.linkedin.com/in/chetanmmohite/)
 
 ---
 
