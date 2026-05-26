@@ -105,7 +105,7 @@ jupyter notebook
 | Topic | Status |
 |---|---|
 | Data Pre-processing | ✅ Complete |
-| Simple Linear Regression | ⏳ Upcoming |
+| Simple Linear Regression | ✅ Complete |
 | Multiple Linear Regression | ⏳ Upcoming |
 | Polynomial Regression | ⏳ Upcoming |
 | Logistic Regression | ⏳ Upcoming |
