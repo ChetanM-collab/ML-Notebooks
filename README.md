@@ -107,7 +107,7 @@ jupyter notebook
 | Data Pre-processing | ✅ Complete |
 | Simple Linear Regression | ✅ Complete |
 | Multiple Linear Regression | ✅ Complete |
-| Polynomial Regression | ⏳ Upcoming |
+| Polynomial Regression | ✅ Complete |
 | Logistic Regression | ⏳ Upcoming |
 | Decision Trees | ⏳ Upcoming |
 | Random Forest | ⏳ Upcoming |
