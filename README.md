@@ -49,6 +49,7 @@ ML-Notebooks/
 - Simple Linear Regression
 - Multiple Linear Regression
 - Polynomial Regression
+- Support Vector Regression
 - Ridge & Lasso Regularization
 
 ### 🔷 Classification
@@ -108,6 +109,7 @@ jupyter notebook
 | Simple Linear Regression | ✅ Complete |
 | Multiple Linear Regression | ✅ Complete |
 | Polynomial Regression | ✅ Complete |
+| Support Vector Regression | ✅ Complete |
 | Logistic Regression | ⏳ Upcoming |
 | Decision Trees | ⏳ Upcoming |
 | Random Forest | ⏳ Upcoming |
