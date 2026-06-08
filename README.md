@@ -16,13 +16,14 @@ This repository documents my learning journey through Machine Learning. Each not
 ML-Notebooks/
 │
 ├── 00_datapreprocessing/
-│   └── data_preprocessing.ipynb 
+│   └── data_preprocessing_cm.ipynb 
 │
 ├── 01_regression/
-│   ├── simple_linear_regression.ipynb
-│   ├── multiple_linear_regression.ipynb
-│   └── polynomial_regression.ipynb
-│   └── decision_tree_regression.ipynb
+│   ├── simple_linear_regression_cm.ipynb
+│   ├── multiple_linear_regression_cm.ipynb
+│   └── polynomial_regression_cm.ipynb
+│   └── decision_tree_regression_cm.ipynb
+│   └── random_forest_regression_cm.ipynb
 │
 ├── 02_classification/
 │   ├── logistic_regression.ipynb
@@ -52,6 +53,7 @@ ML-Notebooks/
 - Polynomial Regression
 - Support Vector Regression
 - Decision Tree Regression
+- Random Forest Regression
 - Ridge & Lasso Regularization
 
 ### 🔷 Classification
@@ -113,6 +115,7 @@ jupyter notebook
 | Polynomial Regression | ✅ Complete |
 | Support Vector Regression | ✅ Complete |
 | Decision Tree Regression | ✅ Complete |
+| Random Forest Regression | ✅ Complete |
 | Logistic Regression | ⏳ Upcoming |
 | Decision Trees | ⏳ Upcoming |
 | Random Forest | ⏳ Upcoming |
