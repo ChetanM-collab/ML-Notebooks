@@ -22,6 +22,7 @@ ML-Notebooks/
 │   ├── simple_linear_regression.ipynb
 │   ├── multiple_linear_regression.ipynb
 │   └── polynomial_regression.ipynb
+│   └── decision_tree_regression.ipynb
 │
 ├── 02_classification/
 │   ├── logistic_regression.ipynb
@@ -50,6 +51,7 @@ ML-Notebooks/
 - Multiple Linear Regression
 - Polynomial Regression
 - Support Vector Regression
+- Decision Tree Regression
 - Ridge & Lasso Regularization
 
 ### 🔷 Classification
@@ -110,6 +112,7 @@ jupyter notebook
 | Multiple Linear Regression | ✅ Complete |
 | Polynomial Regression | ✅ Complete |
 | Support Vector Regression | ✅ Complete |
+| Decision Tree Regression | ✅ Complete |
 | Logistic Regression | ⏳ Upcoming |
 | Decision Trees | ⏳ Upcoming |
 | Random Forest | ⏳ Upcoming |
