@@ -38,14 +38,15 @@ ML-Notebooks/
 │   └── bias_variance_tradeoff.ipynb
 │
 ├── model_selection/
-│   ├── regression/                         
+│   ├── regression/
 │   │   ├── multiple_linear_regression.ipynb
 │   │   ├── polynomial_regression.ipynb
 │   │   ├── support_vector_regression.ipynb
 │   │   ├── decision_tree_regression.ipynb
 │   │   └── random_forest_regression.ipynb
 │   │
-│   └── classification/                     ← Coming soon
+│   └── classification/                     ← 🆕 Added
+│       └── logistic_regression_cm.ipynb
 │
 ├── datasets/
 │   └── Data.csv                            (used by SVR notebook)
@@ -81,7 +82,66 @@ ML-Notebooks/
 
 ---
 
-## 🆕 Model Selection — Regression (R² Performance Comparison)
+## 🆕 Model Selection — Classification (Confusion Matrix & Accuracy)
+
+The `model_selection/classification/` folder contains notebooks that train and evaluate classification models using **Confusion Matrix** and **Accuracy Score** as performance metrics.
+
+Each notebook follows the same structure:
+1. Import libraries
+2. Load dataset
+3. Split into train/test sets (80/20, `random_state=0`)
+4. Train the model
+5. Predict on the test set
+6. Evaluate using confusion matrix and accuracy score from `sklearn.metrics`
+
+### 📓 Notebooks
+
+| Notebook | Model | Key Detail | Feature Scaling |
+|---|---|---|---|
+| `logistic_regression_cm.ipynb` | Logistic Regression | `LogisticRegression()`, binary/multi-class | ✅ Recommended |
+
+> More classification models will be added (Decision Tree, Random Forest, KNN, SVM).
+
+### 📐 Evaluation Metrics — What they measure
+
+**Confusion Matrix** breaks down predictions into four outcomes:
+
+| | Predicted Positive | Predicted Negative |
+|---|---|---|
+| **Actual Positive** | TP (True Positive) | FN (False Negative) |
+| **Actual Negative** | FP (False Positive) | TN (True Negative) |
+
+**Accuracy Score** measures overall correctness:
+
+```
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+```
+
+Derived metrics from the confusion matrix:
+
+| Metric | Formula | When to use |
+|---|---|---|
+| Accuracy | (TP+TN) / total | Balanced classes |
+| Precision | TP / (TP+FP) | When false alarms are costly |
+| Recall | TP / (TP+FN) | When missing positives is costly |
+| F1 Score | 2 × (P×R) / (P+R) | Imbalanced classes |
+
+> **Note:** Accuracy alone can be misleading on imbalanced datasets. Always inspect the full confusion matrix alongside the accuracy score.
+
+### ⚙️ How to run
+
+1. Place your dataset CSV in the `datasets/` folder
+2. Update the `pd.read_csv(...)` line in the notebook to point to your file
+3. Run all cells top to bottom
+
+```python
+# Update this line in the notebook
+dataset = pd.read_csv('../datasets/Data.csv')
+```
+
+---
+
+## 📊 Model Selection — Regression (R² Performance Comparison)
 
 The `model_selection/regression/` folder contains notebooks that train and evaluate five regression models on the same pipeline, using **R² (Coefficient of Determination)** as the performance metric.
 
@@ -102,6 +162,7 @@ Each notebook follows the same structure:
 | `support_vector_regression.ipynb` | Support Vector Regression | RBF kernel, `SVR()` | ✅ Yes — `StandardScaler` on X and y |
 | `decision_tree_regression.ipynb` | Decision Tree Regression | `DecisionTreeRegressor(random_state=0)` | No |
 | `random_forest_regression.ipynb` | Random Forest Regression | 10 estimators, `random_state=0` | No |
+| `logistic_regression_cm.ipynb` | Logistic Regression | `random_state=0` | No |
 
 ### 📐 R² Score — What it measures
 
@@ -117,7 +178,7 @@ R² = 1 - (SSR / SST)
 
 > **Note on SVR:** Feature scaling is mandatory for SVR since it is distance-based. Both `X` and `y` are scaled using separate `StandardScaler` instances, and predictions are inverse-transformed before computing R².
 
-### 📊 Known R² Result
+### 📊 Known R² Results
 
 | Model | R² Score |
 |---|---|
@@ -186,9 +247,9 @@ jupyter notebook
 | Support Vector Regression | ✅ Complete |
 | Decision Tree Regression | ✅ Complete |
 | Random Forest Regression | ✅ Complete |
-| Model Selection — Regression (R²) | ✅ Complete |
-| Model Selection — Classification | ⏳ Upcoming |
-| Logistic Regression | ⏳ Upcoming |
+| Random Forest Regression | ✅ Complete |
+| Model Selection — Regression | ✅ Complete |
+| Logistic Regression | ✅ Complete |
 | Decision Trees | ⏳ Upcoming |
 | Random Forest | ⏳ Upcoming |
 | KNN | ⏳ Upcoming |
@@ -208,6 +269,7 @@ Complete the Udemy ML course, build a strong foundation in supervised learning, 
 - Notebooks include markdown explanations alongside code
 - Datasets are stored in the `/datasets` folder
 - SVR notebook requires feature scaling — scalers are fit on training data only
+- Accuracy alone can be misleading on imbalanced datasets — always review the full confusion matrix
 - Progress tracker above is updated as topics are completed
 
 ---
